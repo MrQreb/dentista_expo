@@ -22,11 +22,14 @@ export default function LoginScreen() {
 
   return (
     <VStack className="flex h-screen justify-center items-center">
-      <VStack className="max-h-[550px] max-w-[350px] flex flex-col justify-center items-center rounded-xl border border-background-200 p-4">
+
+    <Text className="text-3xl text-white font-bold" italic={true} >ToothCare</Text>
+
+      <VStack className="max-h-[550px] max-w-[350px] flex flex-col justify-center items-center rounded-xl border border-background-200 p-4 mt-4">
         <FormControl  isInvalid={isInvalid} size="md" isDisabled={false} isReadOnly={false} isRequired={false} >
         <Text size="xl" className="text-white font-bold mb-6">Login</Text>
           <FormControlLabel>
-            <FormControlLabelText>Email</FormControlLabelText>
+            <FormControlLabelText className="text-white">Email</FormControlLabelText>
           </FormControlLabel>
           <Input className="my-1" size={'lg'}>
             <InputField
@@ -46,7 +49,7 @@ export default function LoginScreen() {
 
         <FormControl isInvalid={isInvalid} size="md" isDisabled={false} isReadOnly={false} isRequired={false} >
           <FormControlLabel>
-            <FormControlLabelText>Password</FormControlLabelText>
+            <FormControlLabelText className="text-white">Password</FormControlLabelText>
           </FormControlLabel>
           <Input className="my-1" size={'lg'}>
             <InputField
@@ -66,7 +69,7 @@ export default function LoginScreen() {
 
 
         <Button className="w-fit self-end mt-4" size="sm" onPress={handleSubmit}>
-          <ButtonText>Iniciar Sesion</ButtonText>
+          <ButtonText className="text-white">Iniciar Sesion</ButtonText>
         </Button>
       </VStack>
     </VStack>
